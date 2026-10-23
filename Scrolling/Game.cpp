@@ -64,10 +64,18 @@ void PlayMode::Update(float dTime)
 
 void PlayMode::Render(float dTime, DirectX::SpriteBatch & batch) 
 {
-	Sprite spr(mD3D);
+	/*Sprite spr(mD3D);
 	spr.SetTex(*mD3D.GetCache().LoadTexture(&mD3D.GetDevice(), "backgroundlayers/InTheRightOrderTheyLookLikeThis.dds", "bgnd", true));
 	spr.SetScale(Vector2(1, 1));
+	spr.Draw(batch);*/
+	Sprite spr(mD3D);
+	spr.SetTex(*mD3D.GetCache().LoadTexture(&mD3D.GetDevice(), "cat.dds", "cat", true));
+	RECTF rect = RECTF{ -512,-512, 1024, 1024 };
+	spr.SetTexRect(rect);
+	spr.mPos = Vector2(100, 20);
+	spr.SetScale(Vector2(0.125f, 0.125f));
 	spr.Draw(batch);
+
 }
 
 
