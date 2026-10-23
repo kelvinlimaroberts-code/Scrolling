@@ -14,8 +14,6 @@ using namespace DirectX::SimpleMath;
 
 
 
-
-
 //if ALT+ENTER or resize or drag window we might want do
 //something like pause the game perhaps, but we definitely
 //need to let D3D know what's happened (OnResize_Default).
